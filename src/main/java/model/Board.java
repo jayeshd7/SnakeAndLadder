@@ -1,14 +1,14 @@
 package model;
 
+import lombok.Getter;
+
 import java.util.List;
 import java.util.Optional;
 
 public class Board {
+    @Getter
     List<Cell> cells;
 
-    public List<Cell> getCells() {
-        return cells;
-    }
 
     public Board(List<Cell> cells) {
         this.cells = cells;

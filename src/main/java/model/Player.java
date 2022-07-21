@@ -1,19 +1,19 @@
 package model;
 
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Objects;
 
 public class Player {
+    @Setter @Getter
     private int position;
+    @Getter @Setter
     private final String playerName;
 
-    public String getPlayerName() {
-        return playerName;
-    }
 
-    public int getPosition() {
-        return position;
-    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -39,7 +39,4 @@ public class Player {
         return "Player :" + playerName;
     }
 
-    public void setPosition(int position) {
-        this.position = position;
-    }
 }

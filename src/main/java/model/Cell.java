@@ -1,6 +1,9 @@
 package model;
 
+import lombok.Getter;
+
 public class Cell {
+    @Getter
     private final int position;
     private Move move = new DefaultMove();
 
@@ -14,9 +17,6 @@ public class Cell {
     }
 
 
-    public int getPosition() {
-        return position;
-    }
 
     public int nextPosition() {
         int nextPosition = move.getNextPosition();

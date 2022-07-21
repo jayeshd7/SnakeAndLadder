@@ -1,5 +1,7 @@
 import exception.GameOverException;
 import exception.InvalidPlayerException;
+import lombok.Getter;
+import lombok.Setter;
 import model.Board;
 import model.Player;
 import stragtegy.Dice;
@@ -9,23 +11,16 @@ import java.util.*;
 
 public class Game {
     private final Board board;
+
+    @Setter
     private Dice dice;
+
+    @Getter @Setter
     private final Map<Integer, Player> res;
     private int winnerCount;
+
+    @Getter @Setter
     private final Queue<Player> playerQueue;
-
-    public Queue<Player> getPlayerQueue() {
-        return playerQueue;
-    }
-
-    public Map<Integer, Player> getRes() {
-        return res;
-    }
-
-
-    public void setDice(Dice dice) {
-        this.dice = dice;
-    }
 
     public Game(List<Player> playerList, Board board, Dice dice) {
         this.board = board;
